@@ -17,6 +17,9 @@ RUN bitnami-pkg unpack suitecrm-7.7.8-0 --checksum 62772fc6a991e9e65583574294410
 
 COPY rootfs /
 
+# Copy all files from the alias folder to the original folder
+RUN cp -Rf /bitnami/suitecrm/* /opt/bitnami/suitecrm/
+
 VOLUME ["/opt/bitnami/suitecrm", "/bitnami/suitecrm", "/bitnami/apache", "/bitnami/php"]
 
 EXPOSE 80 443
