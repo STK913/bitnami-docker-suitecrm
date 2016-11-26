@@ -17,7 +17,7 @@ RUN bitnami-pkg unpack suitecrm-7.7.8-0 --checksum 62772fc6a991e9e65583574294410
 
 COPY rootfs /
 
-VOLUME ["/bitnami/suitecrm", "/bitnami/apache", "/bitnami/php"]
+VOLUME ["/opt/bitnami/suitecrm", "/bitnami/suitecrm", "/bitnami/apache", "/bitnami/php"]
 
 EXPOSE 80 443
 
